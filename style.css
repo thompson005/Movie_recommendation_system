@@ -1,0 +1,97 @@
+body {
+   font-family: 'Arial', sans-serif;
+   background-color: #f4f4f4; /* Light background color */
+   color: #333; /* Text color */
+   text-align: center;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   width: 80%;
+   margin: 0 auto;
+   background-color: #fff; /* Container background color */
+   padding: 20px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Container shadow */
+   border-radius: 10px;
+}
+
+h1 {
+   background-color: #333; /* Header background color */
+   color: #fff; /* Header text color */
+   padding: 20px;
+   border-bottom: 2px solid #ee6e73; /* Highlight color */
+   font-size: 24px; /* Header text size */
+}
+
+form {
+   margin: 20px;
+}
+
+form label {
+   font-weight: bold;
+}
+
+form input[type="text"] {
+   width: 300px;
+   padding: 10px;
+   font-size: 16px;
+   border: 2px solid #333; /* Input border color */
+   border-radius: 5px;
+   background-color: #f4f4f4; /* Input background color */
+   color: #333; /* Input text color */
+}
+
+form input[type="submit"] {
+   background-color: #ee6e73; /* Button background color */
+   color: #fff; /* Button text color */
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+#movie_info {
+   margin: 20px;
+   text-align: left;
+}
+
+#movie_info h2 {
+   color: #333; /* Movie title color */
+}
+
+.movie-poster img {
+   max-width: 300px; /* Larger movie posters */
+   max-height: 450px; /* Larger movie posters */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Poster shadow */
+   margin-bottom: 10px;
+}
+
+h3 {
+   margin-top: 20px;
+   color: #333; /* Recommended movies header color */
+}
+
+.movie-list {
+   list-style: none;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.movie-list li {
+   width: calc(33.33% - 20px);
+   margin: 20px 0;
+}
+
+.movie-details h4 {
+   color: #333; /* Recommended movie title color */
+   font-size: 18px; /* Recommended movie title size */
+}
+
+.movie-details p {
+   color: #777; /* Release year color */
+   font-size: 16px; /* Release year size */
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommendation</h1>
+        <form action="/" method="POST">
+            <label for="movie_title">Enter a Movie Title:</label>
+            <input type="text" name="movie_title" id="movie_title" required>
+            <input type="submit" value="Recommend Movies">
+        </form>
+
+        <div id="movie_info">
+            {% if selected_movie %}
+                <h2>Selected Movie: {{ selected_movie.title }}</h2>
+                <div class="movie-poster">
+                    <img src="https://image.tmdb.org/t/p/w500{{ selected_movie.poster_path }}" alt="{{ selected_movie.title }} Poster">
+                </div>
+            {% endif %}
+
+            <h3>Recommended Movies:</h3>
+            <ul class="movie-list">
+                {% for movie in recommended_movies %}
+                    <li>
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }} Poster">
+                        </div>
+                        <div class="movie-details">
+                            <h4>{{ movie.title }}</h4>
+                            <p>Release Year: {{ movie.release_date | safe }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
